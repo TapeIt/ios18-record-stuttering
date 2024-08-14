@@ -11,6 +11,9 @@
 		E9F68CC22C6CD2F600FA1A72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F68CC12C6CD2F600FA1A72 /* ContentView.swift */; };
 		E9F68CC42C6CD2F700FA1A72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F68CC32C6CD2F700FA1A72 /* Assets.xcassets */; };
 		E9F68CC72C6CD2F700FA1A72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9F68CC62C6CD2F700FA1A72 /* Preview Assets.xcassets */; };
+		E9F68CCF2C6CD48100FA1A72 /* TapeDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F68CCD2C6CD48000FA1A72 /* TapeDeck.swift */; };
+		E9F68CD02C6CD48100FA1A72 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F68CCE2C6CD48000FA1A72 /* Recorder.swift */; };
+		E9F68CD32C6CD9B400FA1A72 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F68CD22C6CD9B400FA1A72 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		E9F68CC12C6CD2F600FA1A72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9F68CC32C6CD2F700FA1A72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9F68CC62C6CD2F700FA1A72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9F68CCD2C6CD48000FA1A72 /* TapeDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapeDeck.swift; sourceTree = "<group>"; };
+		E9F68CCE2C6CD48000FA1A72 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		E9F68CD22C6CD9B400FA1A72 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F68CD32C6CD9B400FA1A72 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +44,7 @@
 			children = (
 				E9F68CBE2C6CD2F600FA1A72 /* RecordDebug */,
 				E9F68CBD2C6CD2F600FA1A72 /* Products */,
+				E9F68CD12C6CD9B400FA1A72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +61,8 @@
 			children = (
 				E9F68CBF2C6CD2F600FA1A72 /* RecordDebugApp.swift */,
 				E9F68CC12C6CD2F600FA1A72 /* ContentView.swift */,
+				E9F68CCE2C6CD48000FA1A72 /* Recorder.swift */,
+				E9F68CCD2C6CD48000FA1A72 /* TapeDeck.swift */,
 				E9F68CC32C6CD2F700FA1A72 /* Assets.xcassets */,
 				E9F68CC52C6CD2F700FA1A72 /* Preview Content */,
 			);
@@ -65,6 +75,14 @@
 				E9F68CC62C6CD2F700FA1A72 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E9F68CD12C6CD9B400FA1A72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9F68CD22C6CD9B400FA1A72 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F68CC22C6CD2F600FA1A72 /* ContentView.swift in Sources */,
+				E9F68CCF2C6CD48100FA1A72 /* TapeDeck.swift in Sources */,
 				E9F68CC02C6CD2F600FA1A72 /* RecordDebugApp.swift in Sources */,
+				E9F68CD02C6CD48100FA1A72 /* Recorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +295,7 @@
 				DEVELOPMENT_TEAM = X7KLQL6LGL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Record audio";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +325,7 @@
 				DEVELOPMENT_TEAM = X7KLQL6LGL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Record audio";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
