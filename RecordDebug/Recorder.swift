@@ -12,7 +12,8 @@ import UIKit
 
 // MARK: Recorder
 class Recorder {
-    // Audio Recording
+    // Sample rate of 44100 creates stuttering in the first two seconds.
+    // Set the sample rate to 48000 to trigger constant stuttering.
     private let sampleRate: Double = 44100
     private let engine = AVAudioEngine()
     private let recorderNode = AVAudioMixerNode()
